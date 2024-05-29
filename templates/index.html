@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clustering</title>
+</head>
+<body>
+
+    <h1>Clustering</h1>
+
+    <div>
+        <h2>Upload File</h2>
+        <form action="/clustering" method="post" enctype="multipart/form-data">
+            <label for="file">Seleccione un archivo de extensión .csv</label>
+            <br>
+            <input type="file" name="csvFile" id="file" accept=".csv">
+            <br>
+            <label for="numClusters">Ingrese la cantidad de clusters</label>
+            <input type="text" name="numClusters" id="numClusters" placeholder="Ingrese cantidad de clusters">
+            <br>
+            <input type="submit" value="Confirmar" name="submit">
+        </form>
+    </div>
+    
+</body>
+</html>
