@@ -6,12 +6,19 @@
     <title>Resultado | Cluster</title>
 </head>
 <body>
-    <h1>Resultado del cluster</h1>
-    <table>
-
-        {{data}}
-        <br>
-        {{numeric_data}}
-    </table>
+    <div>
+        <h1>Resultado del cluster</h1>
+        <div>
+            <h2>Data</h2>
+            {{ data | safe }}
+        </div>
+        <div>
+            <h2>Numeric Data</h2>
+            {{ numeric_data | safe }}
+        </div>
+        <form action="/" method="get">
+            <button type="submit" class="btn btn-primary mt-3">Volver al inicio</button>
+        </form>
+    </div>
 </body>
 </html>

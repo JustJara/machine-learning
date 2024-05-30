@@ -30,7 +30,8 @@ def show_clustering():
         info=  process_csv_and_cluster(db_connect,file_path, numclusters)
         if info[0]:
             data_to_html = info[2].to_html()
-            return render_template('clustering.html', data=data_to_html, clusters=info[3])
+            numeric_data = info[3].to_html()
+            return render_template('clustering.html', data=data_to_html, numeric_data=numeric_data)
         else:
             print('Entro al else')
             return info[1], 400
