@@ -38,7 +38,7 @@ def process_csv_and_cluster(db, file_path, num_clusters):
         cluster_results = data.to_dict(orient='records')
         db.insert_clustering_result(file_path, num_clusters, cluster_results)
 
-        return True, "Clustering successful."
+        return [True, "Clustering successful.",data,numeric_data]
 
     except Exception as e:
         return False, f"Error processing CSV and performing clustering: {e}"
