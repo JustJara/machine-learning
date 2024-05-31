@@ -2,7 +2,11 @@ import pandas as pd
 from sklearn.cluster import KMeans
 import numpy as np
 
-def process_csv_and_cluster(db, file_path, num_clusters):
+import sys
+sys.path.append('src')
+from controller.database import Database
+
+def process_csv_and_cluster(db : Database, file_path, num_clusters):
     try:
         # Leer el CSV y mostrar los primeros registros para diagnóstico
         data = pd.read_csv(file_path)

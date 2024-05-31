@@ -1,7 +1,9 @@
 # database.py
-
+import sys
+sys.path.append("src")
 import psycopg2
 import json
+from controller.SecretConfig import PGDATABASE, PGUSER, PGPASSWORD, PGHOST, PGPORT
 
 class Database:
     def __init__(self, connection_string):
@@ -11,9 +13,10 @@ class Database:
 
     def connect(self):
         try:
-            self.connection = psycopg2.connect(self.connection_string)
+            self.connection = psycopg2.connect(database = PGDATABASE, user = PGUSER, password = PGPASSWORD, host = PGHOST, port = PGPORT)
             self.cursor = self.connection.cursor()
             print("Conexión exitosa a la base de datos")
+
         except psycopg2.Error as e:
             print(f"Error al conectar a la base de datos: {e}")
             self.connection = None
@@ -31,7 +34,7 @@ class Database:
             return
         
         create_table_query = """
-            CREATE TABLE IF NOT EXISTS my_schema.clustering_results (
+            CREATE TABLE IF NOT EXISTS clustering_results (
                 id SERIAL PRIMARY KEY,
                 filename TEXT NOT NULL,
                 num_clusters INTEGER NOT NULL,
@@ -51,7 +54,7 @@ class Database:
             return
         
         insert_query = """
-            INSERT INTO my_schema.clustering_results (filename, num_clusters, cluster_results)
+            INSERT INTO clustering_results (filename, num_clusters, cluster_results)
             VALUES (%s, %s, %s);
         """
         try:

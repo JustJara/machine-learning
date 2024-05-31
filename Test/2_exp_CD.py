@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append('src')
 import pandas as pd
 from unittest.mock import patch
 from io import StringIO

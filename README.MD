@@ -1,60 +1,83 @@
-# DATA CLUSTER PROJECT
+# Data Clustering Project
 
-## Autors
-- Maria Celeste Zuluaga Giraldo.
-- Estefanny Alejandra Jaimes León.
+## Autores
+- Felipe Villa Jaramillo
+- Angie Diaz Abaunza
 
-## Suggested structure
-- Src carpet: In this folder we have the menu source code and program logic.
-- Test: In this folder we have the error, exception and normal unit tests.
+## ¿Qué y para qué es?
 
-## Functionality and use
-In this program we implement an algorithm to calculate the distance between each data point and the centroids of the current clusters, and then assign each data point to the cluster whose centroid is closest.
+El objetivo principal del proyecto de clustering de datos es agrupar un conjunto de datos en clusters, de tal manera que los elementos dentro de cada grupo sean más similares entre sí que a los de otros grupos. 
 
-## Program execution for GUI
-To execute the program we first need to have a database, in this case one called "adult.csv" was used where we have data on people's age, number of education hours per week, capital loss and capital gained, with this database we proceed to perform the clusterin tests for the user and to not enter floating, negative numbers, so that the file does load correctly, to finally be able to show the user the clusters of the data as output.
+Nota: Este proyecto no fué codificado por los autores anteriormente mencionados, nosotros solo nos encargamos de realizar una interfaz web funcional para este proyecto, así que la lógica y el código sin la interfaz web lo podrá encontrar en el repositorio de github original: https://github.com/Broznif/CUARTA-ENTREGA-COD-LIMPIO---CELESTE-Y-ESTEFANNY.git
 
-pip install kivy["base"]
+Aquí se describen las etapas y componentes clave del proyecto:
 
-pip install pandas
+### 1. Recopilación de Datos:
 
-pip install matplotlib
+   - **Fuentes de Datos:** Archivos CSV cargados por el usuario.
+   - **Almacenamiento:** Datos almacenados en dataframes para su procesamiento.
 
-* Clone the repository.
+### 2. Preprocesamiento de Datos:
+   - **Limpieza de Datos:** Eliminación de valores atípicos y corrección de datos faltantes.
+   - **Transformación de Datos:** Normalización o estandarización.
+   - **Selección de Características:** Elegir las características relevantes.
 
-`git clone https://github.com/Broznif/TERCERA-ENTREGA-COD-ESTEFANNY---CELESTE.git`
+### 3. Algoritmo de Clustering: K-Means
+   - **Configuración:** Determinación del número de clusters (K) especificado por el usuario.
+   - **Entrenamiento:** Aplicación del algoritmo K-Means para agrupar los datos.
 
-* Open a terminal in the folder where the program files are located.
+### 4. Aplicación del Algoritmo
+   - **Generación de Clusters:** Creación de clusters mediante el algoritmo K-Means.
+   - **Evaluación:** Uso de métricas como la inercia y el coeficiente de silueta para evaluar los clusters.
 
-`cd TERCERA-ENTREGA-COD-ESTEFANNY---CELESTE`
+### 5. Visualización y Análisis
+   - **Visualización:** Representación tabular de los clusters.
 
-* Run the following command to start the program:
+## Prerrequisitos para hacerlo funcionar
 
-`python src\console\main.py`
+- **Editor de código fuente (Opcional)**: Asegúrate de tener instalado un editor de código fuente en tu sistema. Te recomendamos Visual Studio Code, puedes descargarlo e instalarlo desde el [sitio oficial de Visual Studio Code](https://code.visualstudio.com/).
 
-The menu will be displayed where you can access to choose which file (.csv only) to use to know the number of clusters.
+- **Python**: Debes tener Python instalado en tu sistema. Puedes descargar la última versión de Python desde el [sitio oficial de Python](https://www.python.org/downloads/). Durante la instalación, asegúrate de marcar la casilla "Agregar Python al PATH".
 
-## Program execution for console
+- **Flask**: Debes instalar Flask en tu sistema. Es posible descargarlo utilizando el comando `pip install flask` en la terminal de tu sistema.
 
-pip install pandas
+- **Scikit-learn**: Debes instalar scikit-learn en tu sistema. Es posible descargarlo utilizando el comando `pip install scikit-learn`.
 
-pip install matplotlib
+- **Numpy**: Debes instalar numpy en tu sistema. Es posible descargarlo utilizando el comando `pip install numpy`.
 
-* Clone the repository.
+- **Pandas**: Debes instalar pandas en tu sistema. Es posible descargarlo utilizando el comando `pip install pandas`.
 
-`git clone https://github.com/Broznif/TERCERA-ENTREGA-COD-ESTEFANNY---CELESTE.git`
+- **Matplotlib**: Debes instalar matplotlib en tu sistema. Es posible descargarlo utilizando el comando `pip install matplotlib`.
 
-* Open a terminal in the folder where the program files are located.
+- **Kivy**: Debes instalar matplotlib en tu sistema. Es posible descargarlo utilizando el comando `pip install kivy["base"]`.
 
-`cd TERCERA-ENTREGA-COD-ESTEFANNY---CELESTE`
+## ¿Cómo lo hago funcionar?
 
-* Run the following command to start the program:
+1. Copia el link del repositorio. (https://github.com/JustJara/machine-learning.git/)
+2. Entra al escritorio de tu computadora, das click derecho y presiona la opción open git bash here.
+3. En la consola de git bash escribe el comando "git clone" y pega el link del repositorio.
+4. En el archivo SecretConfigExample.py que se encuentra en la carpeta controller guarde sus datos de conexión con la base de datos de NeonTech y posteriormente guarde el archivo dentro de la misma carpeta con el nombre de 'SecretConfig.py'.
 
-`python src\console\menu.py`
+## Ejecutar la interfaz web
 
-## Running unit tests
-Before creating a program, a series of unit tests are carried out to verify its correct operation. With this starting point we execute them, making sure to correctly install the libraries, files and commands.
+1. Abra la terminal en su computadora.
+2. Navegue a la carpeta donde está ubicado el proyecto. Por ejemplo, si está en el escritorio, puede usar el siguiente comando (ajuste la ruta según sea necesario): (cd Escritorio/machine-learning-main/)
+3. Asegúrese de estar en el directorio raíz del proyecto. Verifique que puede ver los archivos y carpetas como app.py, src, static, etc.
+4. Ejecute el siguiente comando para iniciar la aplicación: python3 app.py
+5. Una vez ejecutado el comando anterior, busque en la terminal la línea que dice "Running on" y el URL que se muestra a continuación. Presione las teclas CTRL + Click en el URL para abrir directamente la página en su navegador web.
 
-`pip install pytest`
+## Ejecutar pruebas unitarias
 
-`pytest 1 error CM.py`
+1. Abra la terminal en su computadora.
+2. Navegue a la carpeta donde está ubicado el proyecto. Por ejemplo, si está en el escritorio, puede usar el siguiente comando (ajuste la ruta según sea necesario): (cd Escritorio/machine-learning-main/)
+3. Asegúrese de estar en el directorio raíz del proyecto. Verifique que puede ver los archivos y carpetas como app.py, src, static, etc.
+4. Los tests se encuentran en la carpeta 'Test' y a continuación se mostrará cada comando para ejecutar los diferentes tests existentes:
+
+   - **1_error_CM**: Ejecutar el siguiente comando `python3 Test/1_error_CM.py`.
+   - **1_exp_CM**: Ejecutar el siguiente comando `python3 Test/1_exp_CM.py`.
+   - **1_normal_CM**: Ejecutar el siguiente comando `python3 Test/1_normal_CM.py`.
+   - **2_error_CD**: Ejecutar el siguiente comando `python3 Test/2_error_CD.py`.
+   - **2_exp_CD**: Ejecutar el siguiente comando `python3 Test/2_exp_CD.py`.
+   - **2_normal_CD**: Ejecutar el siguiente comando `python3 Test/2_normal_CD.py`.
+   - **test_clustering.py**: Ejecutar el siguiente comando `python3 Test/test_clustering.py`.
+   - **test_database**: Ejecutar el siguiente comando `python3 Test/test_database.py`.

@@ -1,5 +1,7 @@
 import unittest
 import numpy as np
+import sys
+sys.path.append('src')
 import pandas as pd
 from logica.logica import Clusterer, load_data, show_data, show_clustered
 

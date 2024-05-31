@@ -4,13 +4,12 @@ import matplotlib.pyplot as plt
 import warnings
 import math
 import random
-import sys
 warnings.filterwarnings('ignore')
 
 """
 Load data
 """
-data = pd.read_csv(r'C:\Users\User\Downloads\PRIMERA ENTREA COD ESTEFANNY - CELESTE\src\console\adult.csv', na_values='?', encoding='utf-8')
+data = pd.read_csv(r'src/console/adult.csv', na_values='?', encoding='utf-8')
 data.dropna(inplace=True) 
 
 """

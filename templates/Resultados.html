@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and links for the document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Application</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Navigation bar with links to different sections of the web application -->
+        <nav>
+            <a href="{{ url_for('web.index') }}"><i>Home</i></a>
+            <a href="{{ url_for('web.show_clustering') }}"><i>Clustering</i></a>
+        </nav>
+        <!-- Header text section -->
+        <section class="textos-header">
+            <h1><i>Machine Learning</i></h1>
+            <h2><i>Dataset Classification</i></h2>
+        </section>
+        <!-- Decorative wave element -->
+        <div class="wave" style="height: 200px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M-0.00,49.85 C367.04,216.02 321.89,-29.02 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" style="stroke: none; fill: #fff;"></path>
+            </svg>
+        </div>
+    </header>
+
+    <section class="Resultados">
+        <div class="contenedor">
+            <h2 class="titulo"><span><i>Clustering Results</i></span></h2>
+
+            <div>
+                <!-- Section for displaying the Data table -->
+                <div>
+                    <section class="textos-tabla">
+                        <h2><i>Data</i></h2>
+                    </section>
+                    <br><br>
+                    <div class="div-table-container">
+                        {{ data | safe }}
+                    </div>
+                </div>
+                <!-- Section for displaying the Numeric Data table -->
+                <div>
+                    <br><br>
+                    <section class="textos-tabla">
+                        <h2><i>Numeric Data</i></h2>
+                        <br><br>
+                    </section>
+                    <div class="div-table-container numeric-table">
+                        {{ numeric_data | safe }}
+                    </div>
+                </div>
+                <!-- Form to return to the homepage -->
+                <form action="/" method="get">
+                    <button type="submit" class="btn btn-primary mt-3">Go back</button>
+                </form>
+            </div>
+
+            <br><br>
+            <!-- Section for displaying an image portfolio -->
+            <section class="portafolio">
+                <div class="contenedor">
+                    <div class="galeria-port">
+                        <div class="imagen-port">
+                            <img src="{{ url_for('static', filename='img/ImagenResultados.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+</body>
+</html>

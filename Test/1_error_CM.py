@@ -1,8 +1,11 @@
 import unittest
+import sys
+sys.path.append('src')
+
 import pandas as pd
 from io import StringIO
 from unittest.mock import patch
-from logica.logica import Clusterer, load_data, show_data, show_clustered
+from logica.logica import load_data, show_data, show_clustered
 
 class TestLoadDataFileErrors(unittest.TestCase):
     """

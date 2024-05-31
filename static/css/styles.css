@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Set the font for the body of the document */
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Container class for layout and styling */
+.contenedor {
+    padding: 60px 0;
+    width: 90%; 
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Title class for styling the titles */
+.titulo {
+    color: #90a4ae; 
+    font-size: 30px; 
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Styling for table elements */
+.table {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for the header section */
+header {
+    width: 100%;
+    height: 600px;
+    background: #f3f3f3;
+    background: url(../Img/MachineLearningInicio.png);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Styling for the navigation bar */
+nav {
+    text-align: right;
+    padding: 30px 50px 0 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Styling for the links in the navigation bar */
+nav > a {
+    color: #90a4ae;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Styling for hovered links */
+nav > a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos encabezado */
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.textos-header h1{
+    font-size: 100px;
+    color: #90a4ae;
+    font-family: 'Playfair Display', serif;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: #607d8b;
+    font-family: 'Playfair Display', serif;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos sección inicio */
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Playfair Display', serif;
+}
+
+.imagen-about-us{
+    margin: 0px 0 30px 0;
+    width: 300px;
+}
+
+.contenedor-sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+/* Estilos sección clustering */
+.contenido-textos h3{
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.contenido-textos h3 span{
+    background: #D6DBDF;
+    color: black;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    margin-right: 5px;
+    font-family: 'Playfair Display', serif;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+    font-family: 'Playfair Display', serif;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card{
+    background: #EAECEE;
+    display: flex;
+    width: 500%;
+    height: 400%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    font-family: 'Playfair Display', serif;
+}
+
+.cards .card img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border: 3px solid #D6DBDF;
+    border-radius: block;
+}
+
+/* Estilos botones sección clustering */
+input[type="file"] {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border-radius: 12px;
+    border: 2px solid #007BFF; 
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid #007BFF;
+    background-color: #f8f9fa;
+    margin-top: 10px; 
+}
+
+input[type="submit"] {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid #007BFF;
+    background-color: #007BFF; 
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilos imagen Resultados */
+
+.portafolio{
+    background: #f2f2f2;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.imagen-port{
+    width: 40%;
+    margin-bottom: 10px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilos para botón volver inicio */
+.btn {
+    background-color: #add8e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #87ceeb;
+}
+
+/* Estilos para la tabla data */
+.div-table-container {
+    width: 100%;
+    overflow-x: auto;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.div-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #607d8b;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.div-table-container table td,
+.div-table-container table th {
+    border: 1px solid #101010;
+    padding: 4px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.div-table-container table th {
+    background-color: #e3f2fd;
+    color: #333;
+}
+
+.textos-tabla h2 {
+    text-align: center;
+    font-style: italic;
+    color: #546e7a;
+}
+
+/* Estilos para la tabla numeric_data */
+.numeric-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.numeric-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #607d8b;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.numeric-table table td,
+.numeric-table table th {
+    border: 1px solid #101010;
+    padding: 4px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.numeric-table table th {
+    background-color: #e3f2fd;
+    color: #333;
+}
+
+.textos-tabla h2 {
+    text-align: center;
+    font-style: italic;
+    color: #546e7a;
+}
+
+.numeric-table {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Boton iniciar clustering*/
+.btn-clustering {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #607d8b;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-clustering:hover {
+    background-color: #455a64;
+}

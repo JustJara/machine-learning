@@ -1,27 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata and links for the document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clustering</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Application</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-
-    <h1>Clustering</h1>
-
-    <div>
-        <h2>Upload File</h2>
-        <form action="/clustering" method="post" enctype="multipart/form-data">
-            <label for="file">Seleccione un archivo de extensión .csv</label>
-            <br>
-            <input type="file" name="csvFile" id="file" accept=".csv">
-            <br>
-            <label for="numClusters">Ingrese la cantidad de clusters</label>
-            <input type="text" name="numClusters" id="numClusters" placeholder="Ingrese cantidad de clusters">
-            <br>
-            <input type="submit" value="Confirmar" name="submit">
-        </form>
-    </div>
-    
+    <header>
+        <!-- Navigation bar with links to different sections of the web application -->
+        <nav>
+            <a href="{{ url_for('web.index') }}"><i>Home</i></a>
+            <a href="{{ url_for('web.show_clustering') }}"><i>Clustering</i></a>
+        </nav>
+        <!-- Header text section -->
+        <section class="textos-header">
+            <h1><i>Machine Learning</i></h1>
+            <h2><i>Dataset Classification</i></h2>
+        </section>
+        <!-- Decorative wave element -->
+        <div class="wave" style="height: 200px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M-0.00,49.85 C367.04,216.02 321.89,-29.02 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" style="stroke: none; fill: #fff;"></path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <!-- Section describing the functionalities of the web application -->
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo"><span><i>What functionalities does this web application have?</i></span></h2>
+            <div class="contenedor-sobre-nosotros">
+                <!-- Image for the about us section -->
+                <img src="{{ url_for('static', filename='img/ImagenInicio.jpg') }}" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <br><br><br>
+                    <!-- Description of the first functionality -->
+                    <h3><span>1 </span>Load file into memory</h3>
+                    <p> In this functionality, the user is expected to upload a file from their device. Once uploaded, the system will process the file and extract the data, which will be stored in an in-memory dataframe. This dataframe allows efficient data manipulation and analysis.</p>
+                    <!-- Description of the second functionality -->
+                    <h3><span>2 </span>Classify dataset</h3>
+                    <p>In this functionality, the user is expected to upload a dataframe with the data to be classified and specify the desired number of clusters. The system will process this data and generate the corresponding clusters.</p>
+                    <!-- Button to initiate clustering -->
+                    <br>
+                    <a href="{{ url_for('web.show_clustering') }}" class="btn-clustering">Start clustering</a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

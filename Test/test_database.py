@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append('src')
 from unittest.mock import MagicMock, patch
 from controller.database import Database
 

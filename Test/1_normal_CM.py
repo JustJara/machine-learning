@@ -1,3 +1,5 @@
+import sys
+sys.path.append('src')
 from logica.logica import Clusterer, load_data, show_data, show_clustered 
 import unittest
 import pandas as pd

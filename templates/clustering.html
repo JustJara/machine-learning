@@ -1,24 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata and links for the document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado | Cluster</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Application</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <div>
-        <h1>Resultado del cluster</h1>
-        <div>
-            <h2>Data</h2>
-            {{ data | safe }}
+    <header>
+        <!-- Navigation bar with links to different sections of the web application -->
+        <nav>
+            <a href="{{ url_for('web.index') }}"><i>Home</i></a>
+            <a href="{{ url_for('web.show_clustering') }}"><i>Clustering</i></a>
+        </nav>
+        <!-- Header text section -->
+        <section class="textos-header">
+            <h1><i>Machine Learning</i></h1>
+            <h2><i>Dataset Classification</i></h2>
+        </section>
+        <!-- Decorative wave element -->
+        <div class="wave" style="height: 200px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M-0.00,49.85 C367.04,216.02 321.89,-29.02 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" style="stroke: none; fill: #fff;"></path>
+            </svg>
         </div>
-        <div>
-            <h2>Numeric Data</h2>
-            {{ numeric_data | safe }}
-        </div>
-        <form action="/" method="get">
-            <button type="submit" class="btn btn-primary mt-3">Volver al inicio</button>
-        </form>
-    </div>
+    </header>
+
+    <style>
+        /* Table styling */
+        table, th, td {
+            border: 1px solid #D6DBDF;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Section for Clustering functionality -->
+        <section class="Clustering contenedor">
+            <h2 class="titulo"><span><i>Clustering</i></span></h2>
+            <div class="cards">
+                <div class="card">
+                    <!-- Image for the Clustering section -->
+                    <img src="{{ url_for('static', filename='img/ClusteringPic.jpg') }}" alt="">
+                    <div class="contenido-texto-card">
+                        <br>
+                        <!-- Form for uploading a CSV file and specifying number of clusters -->
+                        <h2><i>Upload a file</i></h2>
+                        <br>
+                        <form action="{{ url_for('web.show_clustering') }}" method="post" enctype="multipart/form-data">
+                            <label for="file">Select a .csv file</label>
+                            <br><br>
+                            <input type="file" name="csvFile" id="file" accept=".csv">
+                            <br><br>
+                            <label for="numClusters">Enter the number of clusters</label>
+                            <br><br>
+                            <input type="text" name="numClusters" id="numClusters" placeholder="Number of clusters">
+                            <br><br>
+                            <input type="submit" value="Confirm" name="submit">
+                            <br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
