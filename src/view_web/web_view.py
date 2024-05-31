@@ -85,10 +85,12 @@ def get_temp_file_path(filename):
     file_path : str
         The path to the temporary file. La ruta al archivo temporal.
     '''
+    # Windows
 
-    if os.name == 'nt':  # Windows
-        file_path = tempfile.gettempdir() + f"\\{file.filename}"
-    else:  # Unix-based systems
+    if os.name == 'nt':
+            file_path = tempfile.gettempdir() + f"\\{filename}"
+    #Unix based systems    
+    else: 
         temp_dir = '/tmp'
         file_path = os.path.join(temp_dir, filename)
     return file_path
