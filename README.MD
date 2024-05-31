@@ -51,6 +51,35 @@ Aquí se describen las etapas y componentes clave del proyecto:
 
 - **Kivy**: Debes instalar matplotlib en tu sistema. Es posible descargarlo utilizando el comando `pip install kivy["base"]`.
 
+## Organización de carpetas
+
+- *ARCHIVOS CVS*: Esta carpeta contiene archivos .csv los cuales pueden ser utilizados como prueba por el usuario
+
+- *sql*: Esta carpeta contiene las sentencias para la creación e inserción de la base de datos.
+
+- *src*:
+  - *console*: Se encuentran los archivos que permiten la visualización por consola del proyecto y por interfaz gráfica de kivy: menu.py y main.py respectivamente.
+  - *controller*: Esta carpeta cuenta la lógica de la base de datos para manejar las inserciones y creaciones de la base de datos y el procesamiento de los clusters.
+  - *logica*: Esta carpeta alberga la lógica del proyecto, es decir, las funcionalidades principales.
+  - *model*: En esta carpeta se encuentra el archivo con los modelos de las clases que se utilzan dentro del proyecto.
+  - *view_web*: Esta carpeta cuenta con un archivo con la lógica para la interfaz web utilizando flask.
+    - *web_view.py*: Este archivo cuenta con toda la implementación para que el proyecto se ejecute correctamente desde la interfaz web utilizando la libreria de Flask.
+
+- *static\css*:
+  - *styles.css*: Archivo de estilos CSS que se aplica a las páginas HTML de la aplicación para definir el diseño y la apariencia visual.
+
+- *templates*:
+  - *clustering.html*: Una plantilla HTML que muestra la visualización de resultados de clustering.
+  - *index.html*: La plantilla HTML para la página principa de la aplicación.
+  - *Resultados.html*: Una plantilla HTML para mostrar resultados que arroja el programa.
+
+- *Test*: En esta carpeta se encuentran las pruebas unitarias del proyecto.
+
+- *app.py*: Este es el archivo principal para la ejecución del código, desde aquí se ejecuta la aplicación web.
+
+- *SecretConfig.py*: En este archivo se encuentran los parámetros de conexión de la base de datos de NeonTech.
+
+
 ## ¿Cómo lo hago funcionar?
 
 1. Copia el link del repositorio. (https://github.com/JustJara/machine-learning.git/)
